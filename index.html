@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ Для самой лучшей Анюты ✨</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Фон с частицами -->
+    <div id="particles-js"></div>
+
+    <!-- Аудиоплеер (скрытый) -->
+    <audio id="background-music" loop>
+        <source src="assets/audio/uplifting-ambient.mp3" type="audio/mpeg"> <!-- ЗАМЕНИ НА СВОЙ АУДИОФАЙЛ -->
+        Твой браузер не поддерживает аудио элемент.
+    </audio>
+
+    <!-- Управление музыкой -->
+    <div id="music-controls">
+        <button id="play-pause-btn"><i class="fas fa-play"></i></button>
+    </div>
+
+    <!-- Контейнер для комплиментов под курсором -->
+    <div id="cursor-compliment"></div>
+
+    <!-- Оверлей для "виртуального объятия" -->
+    <div id="hug-overlay">
+        <div class="hug-message">Теплые объятия! ❤️</div>
+    </div>
+
+    <!-- Основной контейнер страницы -->
+    <div class="container">
+        <header class="hero-section">
+            <h1 class="title main-title">Привет, милая Анюта!</h1>
+            <p class="subtitle">Этот маленький уголок Вселенной создан специально для тебя...</p>
+            <div class="scroll-indicator">
+                <span></span><span></span><span></span>
+            </div>
+        </header>
+
+        <section id="message1" class="content-section compliment-zone">
+            <h2>Мы знаем, сегодня день выдался непростым...</h2>
+            <p class="animated-text">Но помни, даже после самой темной ночи всегда наступает рассвет.
+               И тучи не вечны, они обязательно рассеются, открыв чистое и яркое небо.
+            </p>
+            <div class="image-container animated-border">
+                <img src="assets/images/photo_2.jpg" alt="Улыбка Анюты"> <!-- ЗАМЕНИ -->
+            </div>
+        </section>
+
+        <section id="message2" class="content-section compliment-zone">
+            <h2>Ты невероятно сильный и светлый человек!</h2>
+            <p class="animated-text">Твоя улыбка способна растопить ледники, а доброта – согреть весь мир.
+               Не забывай об этом, даже когда кажется, что всё вокруг серое.
+               В тебе живет целая вселенная тепла!
+            </p>
+            <blockquote class="quote">
+                "Будь светом для самой себя, и мир вокруг засияет."
+                <cite>- Твой маленький маяк</cite>
+            </blockquote>
+        </section>
+
+        <section id="gallery" class="content-section">
+            <h2>Моменты радости</h2>
+            <p>Давай вспомним что-то хорошее и теплое.</p>
+            <div class="photo-gallery">
+                <div class="gallery-item animated-border">
+                    <img src="assets/images/photo_0.jpg" alt="Счастливый момент Анюты"> <!-- ЗАМЕНИ -->
+                    <div class="gallery-item-overlay">Удивительная!</div>
+                </div>
+                <div class="gallery-item animated-border">
+                    <img src="assets/images/photo_1.jpg" alt="Ещё один счастливый момент"> <!-- ЗАМЕНИ -->
+                    <div class="gallery-item-overlay">Волшебная!</div>
+                </div>
+                <!-- Добавь больше фото, если нужно -->
+            </div>
+            <div class="video-container animated-border" style="margin-top: 30px;">
+                 <video controls muted loop playsinline poster="assets/images/video_poster.jpg"> <!-- ЗАМЕНИ video_poster.jpg -->
+                    <source src="assets/videos/video_0.MP4" type="video/mp4"> <!-- ЗАМЕНИ -->
+                    Твой браузер не поддерживает это видео.
+                </video>
+                <p class="video-caption">Маленький лучик из твоего видеоархива ❤️</p>
+            </div>
+        </section>
+
+        <section id="message3" class="content-section compliment-zone">
+            <h2>Ты не одна!</h2>
+            <p class="animated-text">Знай, что рядом всегда есть люди, которые тебя любят, ценят и готовы поддержать.
+               Мы очень тебя любим и верим в тебя!
+               И я, твой верный цифровой посланник, тоже здесь, чтобы обнять тебя светом и теплом этих пикселей.
+            </p>
+            <button id="virtual-hug-btn" class="futuristic-button">Подарить виртуальное объятие</button>
+        </section>
+
+        <footer class="final-message">
+            <h2 class="glowing-text">Пусть твоё настроение станет таким же ярким, как звезды на этом небе!</h2>
+            <p>С огромной любовью и поддержкой,<br>Тот, кто очень хочет видеть твою улыбку ✨</p>
+            <div class="heart-pulse">❤️</div>
+        </footer>
+    </div>
+
+    <!-- Библиотеки через CDN -->
+    <!-- Particles.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha512-Kef5NjsHBkE9VVVhncIe3HNBWjsB5TRdU77PGnE3EByc2i5zqCUeARJbQAn2Al2O3V1V1S6gX7Nq+7G1RDwTbA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- GSAP Core CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- ScrollTrigger Plugin CDN - ПОДКЛЮЧАЕМ ЯВНО -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzFHVcrmkBXMcBIMO5zzCfYnsPN益Pin+5An4AWiQSMLrHXMipWEL3XA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Локальные скрипты -->
+    <script src="js/particles-config.js"></script>
+    <script src="js/app.js"></script> <!-- Здесь теперь gsap.registerPlugin(ScrollTrigger); должен сработать -->
+</body>
+</html>
